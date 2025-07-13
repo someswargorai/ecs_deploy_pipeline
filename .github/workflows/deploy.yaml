@@ -40,5 +40,5 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster glorious-fox-lt775q \
-            --service someswar-task-new-2-service-uz08idkh \
+            --service someswar-task-new-2-service-0u3t0ymv \
             --force-new-deployment
