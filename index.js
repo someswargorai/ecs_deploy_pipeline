@@ -24,7 +24,7 @@ app.use(cors({
     origin:"*"
 }));
 app.get("/",(req,res)=>{
-    res.status(200).send("ECS demo using fargate working fine like pro 🔥🔥🔥");
+    res.status(200).send("ECS demo using fargate working fine like pro 🔥🔥");
 })
 
 app.get('/health', (req, res) => {
