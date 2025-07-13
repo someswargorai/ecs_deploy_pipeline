@@ -39,6 +39,6 @@ jobs:
       - name: Force ECS service deployment
         run: |
           aws ecs update-service \
-            --cluster glorious-fox-lt775q \
-            --service someswar-task-new-2-service-0u3t0ymv \
+            --cluster favorable-kangaroo-zymf7l \
+            --service someswar-task-new-3-service-i3iakrn3 \
             --force-new-deployment
