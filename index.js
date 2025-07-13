@@ -27,9 +27,16 @@ app.get("/",(req,res)=>{
     res.status(200).send("ECS demo using fargate working fine like pro 🔥🔥🔥🔥🔥🔥");
 })
 
-app.get('/health', (req, res) => {
-  res.status(200).send('OK');
+app.get('/health', async (req, res) => {
+  try {
+    await client.query('SELECT 1');
+    res.status(200).json({ status: 'UP', db: 'connected' });
+  } catch (err) {
+    console.error('DB down:', err);
+    res.status(500).json({ status: 'DOWN', db: 'not reachable' });
+  }
 });
+
 
 
 app.get("/api/create-db", async (req, res) => {
