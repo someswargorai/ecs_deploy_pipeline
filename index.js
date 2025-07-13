@@ -105,6 +105,7 @@ app.get("/api/get-users", async (req, res) => {
   try {
     const fetchedUsers=await client.query(query);
     const users=fetchedUsers.rows;
+    console.log("Query result:", users);
     res.status(200).json({message:"✅ User fetched successfully.", users});
   } catch (err) {
     console.error("❌ Error inserting user:", err);
